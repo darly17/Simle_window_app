@@ -185,19 +185,19 @@ class Controller:
 
     def create(self, student_data):
         try:
-            # Валидация данных
+           
             errors = self.validate_student_data(student_data)
             if errors:
                 return errors
 
-            # Добавление в базу данных
+            
             self.db.add_student(
                 fio=student_data['fio'],
                 group=student_data['group'],
                 exams=student_data['exams']
             )
 
-            # Успешное сообщение
+            
 
             return True
 
